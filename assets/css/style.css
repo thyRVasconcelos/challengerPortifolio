@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+    --header-height: 3.5rem;
+
+    /*========== Cores ==========*/
+    /*Color mode HSL(hue, saturation, lightness)*/
+    --first-color: #6246ea;
+    --title-color: #2b2c34;
+    --text-color: #2b2c34;
+    --body-color: #fffffe;
+    --container-color: #d1d1e9;
+    --border-color: #e45858;
+
+    /*========== Fonte ==========*/
+    /*.5rem = 8px | 1rem = 16px ...*/
+    --body-font: "Raleway", sans-serif;
+    --h2-font-size: 1.25rem;
+    --normal-font-size: 0.938rem;
+
+    /*========== Fonte largura ==========*/
+    --font-regular: 400;
+    --font-medium: 500;
+    --font-semi-bold: 600;
+
+    /*========== z index ==========*/
+    --z-fixed: 100;
+    --z-modal: 1000;
+}
+
+* {
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    border: none;
+}
+
+
+body {
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+    background-color: var(--body-color);
+    color: var(--text-color);
+    font-size: var(--normal-font-size);
+    line-height: 1;
+}
+
+/*==================== Header ====================*/
+.menu-bar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: var(--header-height);
+    background-color: var(--first-color);
+    color: var(--body-color);
+    width: 100%;
+}
+
+.menu-bar ul {
+    display: flex;
+    list-style: none;
+}
+
+.menu-bar ul li a {
+    padding: 0.5rem 1rem;
+    color: var(--body-color);
+    text-decoration: none;
+    font-family: var(--body-font);
+    font-weight: var(--font-medium);
+}
+
+.menu-bar ul li a:hover {
+    text-shadow: var(--container-color) 5px 5px 20px;
+    color: var(--title-color);
+}
+
+/*==================== Main ====================*/
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - var(--header-height));
+    width: 100%;
+}
+
+
+/*==================== Section Home ====================*/
+.home {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    background-color: var(--container-color);
+}
+
+.text {
+    text-align: start;
+}
+
+.text h1 {
+
+    font-size: 2rem;
+}
+
+.text p {
+    margin-top: .5rem;
+    font-size: 1.5rem;
+
+}
+
+.links {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: start;
+}
+
+.links a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 1rem;
+    padding: 1rem;
+
+}
+
+
+
+/*==================== Footer ====================*/
