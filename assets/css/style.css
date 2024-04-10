@@ -1,251 +1,534 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
 
 :root {
-    --header-height: 3.5rem;
+  --header-height: 3.5rem;
 
-    /*========== Cores ==========*/
-    /*Color mode HSL(hue, saturation, lightness)*/
-    --first-color: #6246ea;
-    --title-color: #2b2c34;
-    --text-color: #2b2c34;
-    --body-color: #fffffe;
-    --container-color: #d1d1e9;
-    --border-color: #e45858;
+  /*========== Cores ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
+  --first-color: #6246ea;
+  --title-color: #2b2c34;
+  --text-color: #2b2c34;
+  --body-color: #fffffe;
+  --container-color: #d1d1e9;
+  --border-color: #e45858;
 
-    /*========== Fonte ==========*/
-    /*.5rem = 8px | 1rem = 16px ...*/
-    --body-font: "Raleway", sans-serif;
-    --h2-font-size: 1.25rem;
-    --normal-font-size: 0.938rem;
+  /*========== Fonte ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --body-font: "Raleway", sans-serif;
+  --h2-font-size: 1.25rem;
+  --normal-font-size: 0.938rem;
 
-    /*========== Fonte largura ==========*/
-    --font-regular: 400;
-    --font-medium: 500;
-    --font-semi-bold: 600;
+  /*========== Fonte largura ==========*/
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semi-bold: 600;
 
-    /*========== z index ==========*/
-    --z-fixed: 100;
-    --z-modal: 1000;
+  /*========== z index ==========*/
+  --z-fixed: 100;
+  --z-modal: 1000;
 }
 
 * {
-    font-family: var(--body-font);
-    font-size: var(--normal-font-size);
-    border: none;
-    margin: 0;
-    padding: 0;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  border: none;
+  margin: 0;
+  padding: 0;
 }
 
 
 body {
-    width: 100%;
-    height: 100vh;
-    box-sizing: border-box;
-    background-color: var(--body-color);
-    color: var(--text-color);
-    font-size: var(--normal-font-size);
-    line-height: 1;
+  width: 100%;
+  height: 100vh;
+  box-sizing: border-box;
+  background-color: var(--body-color);
+  color: var(--text-color);
+  font-size: var(--normal-font-size);
+  line-height: 1;
+
 }
 
 /*==================== Header ====================*/
 .menu-bar {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    height: var(--header-height);
-    background-color: var(--first-color);
-    color: var(--body-color);
-    width: 100%;
-    position: fixed;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: var(--header-height);
+  background-color: var(--first-color);
+  color: var(--body-color);
+  width: 100%;
+  position: fixed;
+  filter: drop-shadow(5px 5px 10px #000000);
 }
 
 .menu-bar ul {
-    display: flex;
-    list-style: none;
+  display: flex;
+  list-style: none;
+  filter: drop-shadow(5px 5px 10px #000000);
 }
 
 .menu-bar ul li a {
-    padding: 0.5rem 2rem;
-    color: var(--body-color);
-    text-decoration: none;
-    font-family: var(--body-font);
-    font-weight: var(--font-medium);
+  padding: 0.5rem 2rem;
+  color: var(--body-color);
+  text-decoration: none;
+  font-family: var(--body-font);
+  font-weight: var(--font-medium);
 }
 
 .menu-bar ul li a:hover {
-    text-shadow: var(--container-color) 5px 5px 20px;
-    color: var(--title-color);
+  text-shadow: var(--container-color) 5px 5px 20px;
+  color: var(--title-color);
 }
 
 /*==================== Main ====================*/
 main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 
 /*==================== Section Home ====================*/
 .home {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 100vh;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    background-color: var(--container-color);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  background: linear-gradient(118deg, #ebd2fb, #9470d8, #3d4498);
+  background-size: 180% 180%;
+  animation: gradient-animation 18s ease infinite;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .text {
-    text-align: start;
+  text-align: start;
 }
 
 .text h1 {
 
-    font-size: 2rem;
+  font-size: 2rem;
 }
 
 .text p {
-    margin-top: .5rem;
-    font-size: 1.5rem;
+  margin-top: .5rem;
+  font-size: 1.5rem;
 
 }
 
 .links {
-    margin-top: 1rem;
-    display: flex;
-    justify-content: start;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: start;
 }
 
 .links a {
-    text-decoration: none;
-    color: var(--text-color);
-    font-size: 1rem;
-    padding: 1rem;
-
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: 1rem;
+  padding: 1rem;
 }
+
+.home>img {
+  filter: drop-shadow(5px 5px 10px #ffffffaa);
+}
+
 
 /*==================== Section Sobre ====================*/
 
 #sobre {
-    display: flex;
-    flex-direction: column;
-    justify-content: ;
-    text-align: start;
-    height: 100vh;
-    width: 100%;
-    background-color: ;
+  display: flex;
+  text-align: start;
+  height: 100vh;
+  width: 100%;
 }
 
 #sobre h2 {
-    font-size: 2rem;
-    margin: 5.5rem 2rem 1rem 2rem;
+  font-size: 2rem;
+  margin: 5.5rem 0 1rem 2rem;
+}
 
+.conteudo {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 50%;
+  margin: 0;
+  padding: 0;
 }
 
 .sobre-text {
-    margin: 2rem 4rem 2rem 4rem;
-    font-size: 1rem;
-    line-height: 2;
-    max-width: 80%;
-    
-    
-    
+  margin: 2rem 0 1rem 4rem;
+  font-size: 1rem;
+  line-height: 2;
+  display: flex;
+  flex-direction: column;
+  width: 70%;
 }
 
+.sobre-text p {
+  margin: .5rem;
+  text-align: justify;
+}
+
+.conteudo-img {
+  width: 50%;
+  height: 90vh;
+  margin: 5.5rem 0 1rem 2rem;
+
+}
+
+.conteudo-img img {}
 
 /*==================== Section Skills ====================*/
 
 #skills {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    height: 100vh;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    background-color: var(--container-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: start;
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(118deg, #ebd2fb, #9470d8, #3d4498);
+  background-size: 180% 180%;
+  animation: gradient-animation 18s ease infinite;
 }
 
-.linguagens {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    background-color: var(--container-color);
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+#skills h2 {
+  font-size: 2rem;
+}
+
+.name {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  line-height: 1.5;
+
+}
+
+.conhecimentos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 60%;
+  height: 90vh;
+  margin: 5.5rem 2rem 1rem 2rem;
+  padding: 0;
+  text-align: center;
+}
+
+.skills-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 10rem;
+  height: 12rem;
+  margin: 1rem;
+  padding: 1rem;
+  background-color: var(--first-color);
+  color: var(--body-color);
+  border-radius: 20px;
+  border: none;
+  box-shadow: 5px 5px 10px #ffffff58;
+}
+
+.skills-item::hover {
+  animation: hithere 1s ease infinite;
+}
+
+@keyframes hithere {
+  30% {
+    transform: scale(1.2);
+  }
+
+  40%,
+  60% {
+    transform: rotate(-20deg) scale(1.2);
+  }
+
+  50% {
+    transform: rotate(20deg) scale(1.2);
+  }
+
+  70% {
+    transform: rotate(0deg) scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.skills-item p {
+  font-size: 1rem;
+  padding-top: 1rem;
+  text-shadow: 10px 5px 10px #ffffff58
 }
 
 /*==================== Section Hobbies ====================*/
 
 #hobbies {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: start;
-    height: 100vh;
-    width: 100%;
-    background-color: ;
+  display: flex;
+  text-align: start;
+  height: 100vh;
+  width: 100%;
 }
+
+#hobbies h2 {
+  font-size: 2rem;
+  margin: 5.5rem 0 1rem 2rem;
+}
+
+.conteudo {
+  display: flex;
+  flex-direction: column;
+  height: 90vh;
+  width: 50%;
+  margin: 0;
+  padding: 0;
+}
+
+.conteudo-text {
+  margin: 2rem 0 1rem 4rem;
+  font-size: 1rem;
+  line-height: 2;
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+}
+
+.conteudo-text p {
+  margin: .5rem;
+  text-align: justify;
+}
+
 
 /*==================== Section Formacao ====================*/
 
 #formacao {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 100vh;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    background-color: var(--container-color);
+  display: flex;
+  align-items: center;
+  text-align: start;
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(118deg, #ebd2fb, #9470d8, #3d4498);
+  background-size: 180% 180%;
+  animation: gradient-animation 18s ease infinite;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.formacao-conteudo {
+  width: 100%;
+  height: 90vh;
+  font-size: 2rem;
+  margin: 5.5rem 0 1rem 2rem;
+}
+
+.formacao-conteudo h2 {
+  font-size: 2rem;
+  width: 100%;
+}
+
+.formacao-item{
+  height: 80vh;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.academico-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 25rem;
+  height: 20rem;
+  margin: 1rem;
+  padding: 1rem;
+  background-color: var(--first-color);
+  color: var(--body-color);
+  border-radius: 20px;
+  border: none;
+  box-shadow: 5px 5px 10px #ffffff58;
+}
+
+
+.formacao-conteudo p {
+  font-size: 1rem;
+  padding-top: 1rem;
+  text-shadow: 10px 5px 10px #ffffff58
 }
 
 /*==================== Section Projetos ====================*/
 
 #projetos {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: start;
-    height: 100vh;
-    width: 100%;
-    background-color: ;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: start;
+  height: 100vh;
+  width: 100%;
+
 }
 
 /*==================== Section Contato ====================*/
 #contato {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 100vh;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    background-color: var(--container-color);
+  display: flex;
+  justify-content: space-between;
+  height: 90vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(118deg, #ebd2fb, #9470d8, #3d4498);
+  background-size: 180% 180%;
+  animation: gradient-animation 18s ease infinite;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.contato-conteudo{
+width: 50%;
+}
+.contato-conteudo h2 {
+  width: 100%;
+  font-size: 2rem;
+  margin: 5.5rem 0 1rem 2rem;
+}
+
+.contato-text {
+  margin: 2rem 4rem 2rem 4rem;
+  font-size: 1rem;
+  font-weight: var(--font-medium);
+  line-height: 2;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 90vh;
+  margin-top: 5.5rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 90vh;
+}
+.input-group-remetente{
+display: flex;
+gap: 3rem;
+}
+
+.input-group-msg{
+  display: flex;
+  flex-direction: column; 
+  }
+
+.input-group{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  
+}
+input {
+  width: 15rem;
+  height: 1rem;
+  padding: 1rem;
+  border-radius: 20px;
+  border: none;
+  box-shadow: 5px 5px 10px #ffffff58;
+}
+
+textarea {
+  width: 15rem;
+  height: 5rem;
+  padding: 1rem;
+  border-radius: 20px;
+  border: none;
+  box-shadow: 5px 5px 10px #ffffff58;
 }
 
 /*==================== Footer ====================*/
 
 .rodape {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: var(--header-height);
-    background-color: var(--first-color);
-    color: var(--body-color);
-    width: 100%;
-
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: var(--header-height);
+  background-color: var(--first-color);
+  color: var(--body-color);
+  width: 100%;
+  filter: drop-shadow(5px 5px 10px #000000);
 }
 
 /*==================== Media  Queries ====================*/
