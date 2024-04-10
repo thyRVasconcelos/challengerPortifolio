@@ -195,7 +195,6 @@ main {
 
 }
 
-.conteudo-img img {}
 
 /*==================== Section Skills ====================*/
 
@@ -377,12 +376,13 @@ main {
   width: 100%;
 }
 
-.formacao-item{
+.formacao-item {
   height: 80vh;
-display: flex;
-align-items: center;
-justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
 .academico-item {
   display: flex;
   flex-direction: column;
@@ -444,9 +444,11 @@ justify-content: center;
     background-position: 0% 50%;
   }
 }
-.contato-conteudo{
-width: 50%;
+
+.contato-conteudo {
+  width: 50%;
 }
+
 .contato-conteudo h2 {
   width: 100%;
   font-size: 2rem;
@@ -470,7 +472,7 @@ width: 50%;
   align-items: center;
   width: 50%;
   height: 80vh;
-  margin-top: 5.5rem;
+  margin: 5.5rem 2rem 1rem 2rem;
 }
 
 form {
@@ -481,24 +483,29 @@ form {
   width: 100%;
   height: 90vh;
 }
-.input-group-remetente{
-display: flex;
-gap: 3rem;
+
+.input-group-remetente {
+  display: flex;
+  gap: 3rem;
+  margin: 0 0 2rem;
 }
 
-.input-group-msg{
-  display: flex;
-  flex-direction: column; 
-  }
-
-.input-group{
+.input-group-msg {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
+  align-items: start;
   width: 100%;
-  
+  gap: 1rem;
+  margin: 0 0 2rem;
 }
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  width: 100%;
+}
+
 input {
   width: 25rem;
   height: 1rem;
@@ -508,9 +515,15 @@ input {
   box-shadow: 5px 5px 10px #ffffff58;
 }
 
+label {
+  padding-bottom: .5rem;
+  font-weight: var(--font-semi-bold);
+  color: var(--body-color);
+}
+
 textarea {
-  width: 50rem;
-  height: 5rem;
+  width: 55rem;
+  height: 20rem;
   padding: 1rem;
   border-radius: 20px;
   border: none;
