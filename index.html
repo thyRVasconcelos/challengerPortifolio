@@ -154,7 +154,7 @@
             <div class="conteudo">
                 <h2>Hobbies</h2>
                 <div class="conteudo-text">
-                    <p>Meus hobbies são: Jogar vídeo game, assistir filmes e séries, ler livros e ouvir música.</p>
+                    <p>Meus hobbies são: Jogar vídeo game, assistir filmes e séries, ler livros, ouvir música e jardinagem.</p>
                 </div>
 
             </div>
@@ -193,33 +193,36 @@
             <div class="contato-conteudo">
                 <h2>Contato</h2>
                 <div class="contato-text">
-                    <p>Quer entrar em contato comigo?</p>
-                    <p>Preencha o formulário abaixo e entrarei em contato o mais rápido possível.</p>
+                    <p>Explore comigo o vibrante mundo do desenvolvimento front-end, onde cada linha de código é uma peça vital na criação de experiências digitais fascinantes. Sou um entusiasta apaixonado, em busca constante de excelência e inovação. Em meu portfólio, encontrará não só habilidades técnicas afiadas, mas também uma paixão ardente por designs intuitivos e visualmente deslumbrantes. </p>
+                    <p>Assim como uma página web, o recrutamento é uma cuidadosa seleção dos melhores elementos para formar uma equipe de sucesso. </p>
+                    <p>Estou empolgado para compartilhar minha jornada e visão, buscando oportunidades para crescer e contribuir neste campo emocionante.</p>
+                    <p>Basta preencher o formulário à sua disposição, e estaremos conectados em um instante. </p>
+                    
                 </div>
             </div>
             <div class="form">
-                <form action="">
+                <form name="meuForm" onsubmit="return validarFormulario()" method="post">
                     <div class="input-group-remetente">
                         <div class="input-group">
                             <label for="nome">Nome:</label>
-                            <input type="text" name="nome" id="nome" required>
+                            <input type="text" name="nome" id="nome">
                         </div>
                         <div class="input-group">
                             <label for="email">E-mail:</label>
-                            <input type="email" name="email" id="email" required>
+                            <input type="email" name="email" id="email" >
                         </div>
                     </div>
                     <div class="input-group-msg">
                     <div class="input-group">
                         <label for="email">Assunto:</label>
-                        <input type="text" name="assunto" id="assunto" required>
+                        <input type="text" name="assunto" id="assunto" >
                     </div>
                     <div class="input-group">
                         <label for="mensagem">Mensagem:</label>
-                        <textarea name="mensagem" id="mensagem" required></textarea>
+                        <textarea name="mensagem" id="mensagem" ></textarea>
                     </div>
                     </div>
-                    <button type="submit">Enviar</button>
+                    <button type="submit" value="Enviar">Enviar</button>
                 </form>
             </div>
         </section>
@@ -228,6 +231,7 @@
         <p>Desenvolvido por Thiago Vasconcelos</p>
         <p>2024</p>
     </footer>
+    <script src="assets/js/main.js"></script>
 </body>
 
 </html>

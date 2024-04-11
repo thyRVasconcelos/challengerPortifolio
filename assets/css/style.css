@@ -36,6 +36,10 @@
   padding: 0;
 }
 
+html{
+scroll-behavior: smooth;
+scroll-padding-top: 2.5rem;
+}
 
 body {
   width: 100%;
@@ -47,6 +51,25 @@ body {
   line-height: 1;
 
 }
+
+body::-webkit-scrollbar {
+  width: 12px;
+  background: transparent;               /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: transparent;        /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--first-color);    /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+    /* creates padding around scroll thumb */
+}
+
+
+
+
 
 /*==================== Header ====================*/
 .menu-bar {
@@ -78,6 +101,7 @@ body {
 .menu-bar ul li a:hover {
   text-shadow: var(--container-color) 5px 5px 20px;
   color: var(--title-color);
+  
 }
 
 /*==================== Main ====================*/
@@ -410,13 +434,39 @@ main {
 
 #projetos {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   text-align: start;
   height: 100vh;
   width: 100%;
-
 }
+
+#projetos h2 {
+  font-size: 2rem;
+  margin: 5.5rem 0 1rem 2rem;
+}
+
+.projeto-conteudo {
+  display: flex;
+  flex-direction: column;
+  height: 90vh;
+  width: 50%;
+  margin: 0;
+  padding: 0;
+}
+
+.projeto-text {
+  margin: 2rem 0 1rem 4rem;
+  font-size: 1rem;
+  line-height: 2;
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+}
+
+.projeto-text p {
+  margin: .5rem;
+  text-align: justify;
+}
+
 
 /*==================== Section Contato ====================*/
 #contato {
@@ -462,7 +512,15 @@ main {
   line-height: 2;
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 70%;
+  text-align: justify;
+}
+
+.contato-text p {
+  margin: .5rem;
+  text-align: justify;
+  font-weight: var(--font-semi-bold);
+  font-family: var(--body-font);
 }
 
 .form {
@@ -528,6 +586,20 @@ textarea {
   border-radius: 20px;
   border: none;
   box-shadow: 5px 5px 10px #ffffff58;
+}
+
+.form button {
+  width: 10rem;
+  height: 3rem;
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 20px;
+  border: none;
+  background-color: var(--first-color);
+  color: var(--body-color);
+  font-weight: var(--font-semi-bold);
+  box-shadow: 5px 5px 10px #ffffff58;
+
 }
 
 /*==================== Footer ====================*/
